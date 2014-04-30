@@ -23,7 +23,7 @@ h1{
 }
 
 ul,li{
-    
+    list-style: none;
 }
 
 .custom-file-input{
@@ -65,3 +65,49 @@ ul,li{
 .Lists{
     padding: 20px; 
 }
+
+.Lists li{
+    border-bottom: 1px solid #ddd;
+    height: 20px;
+    line-height: 20px;
+    padding: 0 10px;
+    display: flex;
+}
+
+.Lists li input[type="text"]{
+    -webkit-appearance:none;
+    border:none;
+    outline: none;
+    display: block;
+    width: 500px
+}
+
+.popout{
+    width: 100%;
+    position: fixed;
+    background: rgba(0,0,0,0.5);
+    color: #fff;
+    height: 100%;
+    top: 0;
+    left: 0;
+}
+
+.popout .close{
+    position: absolute;
+    top: 20px;
+    right: 10px;
+    background: red;
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    line-height: 40px;
+    border-radius: 40px;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+.popout .close:after{
+    content : "X";
+}
+
+

@@ -6,9 +6,8 @@ block content
 
   .mainPage
     .uploadBox
-      form(action="/upload",method="POST")
+      form#form(action="/upload",method="POST")
         input#upload.custom-file-input(type="file",accept="application/zip",name="file")
-    .Lists
-      ul
-        li asdasd
-
+    .popout(style="display:none")
+      .close
+      .content
