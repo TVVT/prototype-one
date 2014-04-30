@@ -11,13 +11,14 @@ $(function(){
         var upload = xhr.upload;
 
         xhr.onreadystatechange = function(){
-            if(xhr.readyState === 4){
+            if(xhr.readyState === 4 && xhr.status === 200){
+                console.log(xhr)
                 $('.popout').show();
                 $('.popout .content').html(xhr.responseText);
             }
         };
 
-        xhr.open('POST',url); //url 是表单的提交地址。
+        xhr.open('POST','/upload'); //url 是表单的提交地址。
         xhr.send(formdata);
     });
 
