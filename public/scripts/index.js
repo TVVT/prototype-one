@@ -14,12 +14,16 @@ $(function(){
                 console.log(xhr)
                 $('.popout').show();
                 $('.popout .content').html(xhr.responseText);
+                var win = window.open(xhr.responseText, '_blank');
+                win.focus();
             }
         };
 
         xhr.open('POST','/upload'); //url 是表单的提交地址。
         xhr.send(formdata);
     });
+
+
 
 
     $('.close').on('click',function(){
