@@ -1,5 +1,14 @@
 extends layout
 
 block content
-  h1= title
-  p Welcome to #{title}
+  header
+    h1 1号店原型上传工具
+
+  .mainPage
+    .uploadBox
+      form
+        input#upload.custom-file-input(type="file",accept="application/zip")
+    .Lists
+      ul
+        li 
+

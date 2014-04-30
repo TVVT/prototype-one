@@ -1,8 +1,62 @@
+*{margin: 0;padding: 0;}
+
 body {
-  padding: 50px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  background: #f3f3f3;
 }
 
 a {
   color: #00B7FF;
 }
+
+header{
+    height: 44px;
+    background: #ff2222;
+    color: #fff;
+    line-height: 44px;
+}
+
+h1{
+    font-size: 18px; 
+    font-weight: normal;
+    padding-left: 20px;
+}
+
+.custom-file-input{
+    width: 200px;
+    outline: none;
+    color: #333;
+}
+
+.custom-file-input::-webkit-file-upload-button {
+  visibility: hidden;
+}
+.custom-file-input::before {
+  content: '点击上传原型（.zip格式）';
+  display: inline-block;
+  background: -webkit-linear-gradient(top, #f9f9f9, #e3e3e3);
+  border: 1px solid #ddd;
+  border-radius: 3px;
+  padding: 5px 8px;
+  outline: none;
+  white-space: nowrap;
+  -webkit-user-select: none;
+  cursor: pointer;
+  text-shadow: 1px 1px #fff;
+  font-weight: 700;
+  font-size: 10pt;
+}
+.custom-file-input:hover::before {
+    box-shadow: 0 0 3px rgba(0,0,0,0.3);
+}
+.custom-file-input:active::before {
+  background: -webkit-linear-gradient(top, #e3e3e3, #f9f9f9);
+}
+
+
+.uploadBox{
+    margin: 30px;
+    text-align: center;
+}
+
+
