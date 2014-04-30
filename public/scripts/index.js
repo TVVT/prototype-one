@@ -3,8 +3,7 @@ $(function(){
     var _input = document.getElementById('upload');
 
     _input.addEventListener('change',function(){
-        var files = _input.files;
-
+        // var files = _input.files;
         var formdata = new FormData(document.getElementById('form'));
 
         var xhr = new XMLHttpRequest();
