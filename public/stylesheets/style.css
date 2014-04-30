@@ -22,6 +22,10 @@ h1{
     padding-left: 20px;
 }
 
+ul,li{
+    
+}
+
 .custom-file-input{
     width: 200px;
     outline: none;
@@ -53,10 +57,11 @@ h1{
   background: -webkit-linear-gradient(top, #e3e3e3, #f9f9f9);
 }
 
-
 .uploadBox{
     margin: 30px;
     text-align: center;
 }
 
-
+.Lists{
+    padding: 20px; 
+}

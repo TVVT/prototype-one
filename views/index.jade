@@ -6,9 +6,9 @@ block content
 
   .mainPage
     .uploadBox
-      form
-        input#upload.custom-file-input(type="file",accept="application/zip")
+      form(action="/upload",method="POST")
+        input#upload.custom-file-input(type="file",accept="application/zip",name="file")
     .Lists
       ul
-        li 
+        li asdasd
 
