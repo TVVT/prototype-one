@@ -114,7 +114,12 @@ ul,li{
 }
 
 .popout .content{
-    margin: 100px;
+    margin: 300px;
+    text-align: center;
 }
 
+.popout .content a{
+  color: #fff;
+  font-size: 18px;
+}
 
