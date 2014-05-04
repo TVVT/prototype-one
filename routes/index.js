@@ -36,7 +36,6 @@ router.post('/upload', function(req, res) {
 router.get('/list', function(req, res) {
 
     var realPath = path.join(__dirname,'../public/prototypes/');
-    console.log(realPath);
 
     fs.readdir(realPath, function(err,files){
         if (err) {
