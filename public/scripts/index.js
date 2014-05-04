@@ -13,9 +13,12 @@ $(function(){
             if(xhr.readyState === 4 && xhr.status === 200){
                 console.log(xhr)
                 $('.popout').show();
-                $('.popout .content').html(xhr.responseText);
-                var win = window.open(xhr.responseText, '_blank');
-                win.focus();
+                var obj = JSON.parse(xhr.responseText);
+                var $a = $('<a href="'+obj.path + '/' + obj.list[0] + '" target="_blank">点击打开</a>');
+                // var $a = $('<a>hello</a>').
+                $('.popout .content').html('').append($a);
+                // var win = window.open(xhr.responseText, '_blank');
+                // win.focus();
             }
         };
 
