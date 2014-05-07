@@ -23,7 +23,6 @@ router.post('/upload', function(req, res) {
                     } else {
                         exec("rm " + req.files.file.path);
                         fs.readdir(__dirname + '/../public/prototypes/' + path.basename(req.files.file.name, '.zip'), function(err, list) {
-                            console.log(list);
                             res.send({
                                 res_code: 1,
                                 path: '/prototypes/' + path.basename(req.files.file.name, '.zip'),
@@ -39,11 +38,10 @@ router.post('/upload', function(req, res) {
                     } else {
                         exec("rm " + req.files.file.path);
                         fs.readdir(__dirname + '/../public/prototypes/' + path.basename(req.files.file.name, '.zip'), function(err, list) {
-                            console.log(list);
                             res.send({
                                 res_code: 1,
                                 path: '/prototypes/' + path.basename(req.files.file.name, '.zip'),
-                                list: list
+                                list: list[0]
                             });
                         })
                     }
