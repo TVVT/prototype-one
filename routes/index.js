@@ -17,7 +17,7 @@ router.post('/upload', function(req, res) {
         if (req.files.file.extension == "zip") {
 
             if (req.headers['user-agent'].indexOf("windows") > 0) {
-                exec("mkdir public/prototypes/" + path.basename(req.files.file.name, '.zip') + " && python uploads/myzip -x -d public/prototypes/" + path.basename(req.files.file.name, '.zip') + " uploads/" + req.files.file.name + " && rm -rf public/prototypes/" + path.basename(req.files.file.name, '.zip') + "/__MACOSX*", function(err, stdout, stderr) {
+                exec("mkdir public/prototypes/" + path.basename(req.files.file.name, '.zip') + " && python uploads/myzip -x -d public/prototypes/" + path.basename(req.files.file.name, '.zip') + " uploads/" + req.files.file.name + " && rm -rf public/prototypes/" + path.basename(req.files.file.name, '.zip') + "/__MACOSX*", {maxBuffer:2000*1024},function(err, stdout, stderr) {
                     if (err) {
                         throw err;
                     } else {
@@ -32,7 +32,7 @@ router.post('/upload', function(req, res) {
                     }
                 });
             } else {
-                exec("unzip " + req.files.file.path + " -d public/prototypes/" + path.basename(req.files.file.name, '.zip') + " && rm -rf public/prototypes/" + path.basename(req.files.file.name, '.zip') + "/__MACOSX*", function(err, stdout, stderr) {
+                exec("unzip " + req.files.file.path + " -d public/prototypes/" + path.basename(req.files.file.name, '.zip') + " && rm -rf public/prototypes/" + path.basename(req.files.file.name, '.zip') + "/__MACOSX*", {maxBuffer:2000*1024}, function(err, stdout, stderr) {
                     if (err) {
                         throw err;
                     } else {
